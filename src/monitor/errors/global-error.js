@@ -4,13 +4,14 @@ export function initGlobalError(Monitor) {
     const config = this._config
     // 获取全局错误
     window.addEventListener('error', (error) => {
+      console.log('window error and before proccess: ', error)
       //执行钩子函数
       beforeProccess(this, config)
       //正式处理错误
       this._proccessError('windowError', error)
       //执行钩子函数
       afterProccess(this, config)
-    })
+    }, true)
 
     //获取 Promise 没 reject 的错误
     window.addEventListener('unhandledrejection', (error) => {

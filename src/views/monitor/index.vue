@@ -26,7 +26,12 @@ export default {
 
   methods: {
     clickHanld() {
-      Promise.reject('test').then()
+      // Promise.reject('test').then()
+      let body = document.getElementsByTagName('body')[0]
+      let jsNode = document.createElement('script')
+      jsNode.setAttribute('type', 'text/javascript')
+      jsNode.setAttribute('src', 'http://127.0.0.1:8090/hello.js')
+      body.appendChild(jsNode)
     }
   }
 }

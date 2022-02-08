@@ -16,7 +16,7 @@ const monitor = new Monitor({
   reportType: 'navigator'
 })
 
-console.log(monitor)
+// console.log(monitor)
 
 // console.log(a)
 

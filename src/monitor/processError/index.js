@@ -21,6 +21,7 @@ export function processError(type, error, ...arg) {
 
 function proccessWindowError(instance, error, config, errConfig) {
   const catchErrorOptions = dealWithErrorAndReturnOptions(error, errConfig)
+  console.log('window error: ', catchErrorOptions)
   instance._config.logsList.push(catchErrorOptions)
   _proccessAndReportError(config, catchErrorOptions)
 }
