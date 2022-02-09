@@ -6,3 +6,4 @@ monitor库用于前端错误监控并上报到服务端，便于查找错误和�
 监控脚本 监控history 监控页面可见效
 
 # 功能规划图
+<image src="https://github.com/monitor-by-mc/monitor/blob/main/src/assets/images/sdk_plan.png">
