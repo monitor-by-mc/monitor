@@ -1,5 +1,6 @@
 import { initMixin } from './mixins/index'
 import { initGlobalError } from './errors/global-error'
+import listen from './listener'
 
 function Monitor(options, addReportOptions) {
   if (
@@ -18,5 +19,6 @@ function Monitor(options, addReportOptions) {
 
 initMixin(Monitor)
 initGlobalError(Monitor)
+listen() // 开启监听，捕获信息
 
 export default Monitor
