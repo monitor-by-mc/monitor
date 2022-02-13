@@ -1,7 +1,9 @@
 import CatchFetch from './fetch'
+import EventListener from './event'
 
 const listeners = {
-  CatchFetch
+  CatchFetch,
+  EventListener
 }
 
 export default function listen () {
