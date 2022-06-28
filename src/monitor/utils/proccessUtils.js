@@ -18,3 +18,22 @@ export function reportErrorByOptions(type, config) {
     )
   }
 }
+
+export function reportErrorByCloseBrower(config, errorMsg) {
+  const _config = config
+  if(_config.logsList.length > 0 && window && window.fetch) {
+    const url = _config.reportUrl
+    const data = JSON.stringify({
+      time: performance.now(),
+      errorMsg
+    })
+    fetch(url, {
+      method: 'POST',
+      body: data,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      keepalive: true,
+    })
+  }
+}
